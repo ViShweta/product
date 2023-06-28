@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      UserProfile
+    </ion-title>
+    <ion-col size="6">
+      <ion-icon name="menu" (click)="presentActionSheet()"></ion-icon>
+    </ion-col>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card *ngFor="let prod of product">
+    <ion-card-header>
+      <div style="display: flex; justify-content: space-between;">
+        <span style="color: blue">
+          <p><strong>Title:</strong> {{ prod.title }}</p>
+        </span>
+        </div>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Description:</strong> <b>{{ prod.description }}</b></p>
+      <p><strong>Quantity:</strong> <b>{{ prod.quantity }}</b></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button routerLink="/addproduct" fill="clear" expand="block"> Add a Product</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

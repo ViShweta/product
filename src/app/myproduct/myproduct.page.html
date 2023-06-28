@@ -1,0 +1,27 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title> My Product</ion-title>
+  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+<ion-content>
+<ion-card *ngFor="let porud of showProd , let i = index">
+  <ion-card-header>
+    <ion-icon name="ellipsis-vertical-sharp" class="ionic-more" (click)="presentActionSheet(i,`)"></ion-icon>
+    <ion-card-title>{{ porud.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-text>{{ porud.description }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>{{ porud.quantity }}</ion-text>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+<p class="ion-text-center" *ngIf="showProd.length == 0">No product found.</p>
+</ion-content>

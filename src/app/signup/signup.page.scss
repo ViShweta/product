@@ -1,0 +1,49 @@
+/* Set the background color of the header toolbar */
+ion-toolbar {
+    --background: #f8f8f8;
+  }
+  
+  /* Center align the title */
+  ion-title {
+    text-align: center;
+  }
+  
+  /* Set the background color of the content area */
+  ion-content {
+    --background: #fff;
+  }
+  
+  /* Add some padding to the form items */
+  ion-item {
+    padding: 10px;
+  }
+  
+  /* Set the font size and color of the labels */
+  ion-label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Set the border radius and background color of the input fields */
+  ion-input {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
+  
+  /* Add some margin to the submit button */
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  /* Center align the submit button */
+  ion-col {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Set the background color and text color of the submit button */
+  ion-button[type="submit"] {
+    --background: #e53935;
+    --color: #fff;
+  }
+  

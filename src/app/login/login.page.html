@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <h2>Login Your Profile </h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <form [formGroup]="LoginForm" (ngSubmit)="OnSubmit(LoginForm.value)">
+          <ion-item>
+            <ion-label position="floating"> Email</ion-label>
+            <ion-input formControlName="email" type="email" placeholder="Enter Your Email"></ion-input>
+          </ion-item>
+          <div *ngIf="LoginForm.controls['email'].invalid && LoginForm.controls['email'].touched"
+            class="alert alert-danger">
+            Enter Correct Email </div>
+          <ion-item>
+            <ion-label position="floating"> Password </ion-label>
+            <ion-input formControlName="password" type="text" placeholder="Enter Password"></ion-input>
+          </ion-item>
+          <div *ngIf="LoginForm.controls['password'].invalid && LoginForm.controls['password'].touched"
+            class="alert alert-danger">
+            Enter Correct Password
+          </div>
+
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit" color="danger" expand="block" [disabled]="LoginForm.invalid">Login</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="divider line one-line">or</div>
+              <div class="already">Already a user?</div>
+            </ion-col>
+          </ion-row>
+          <ion-button [routerLink]="['/signup']" fill="clear" expand="block" color="primary"> Register </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,47 @@
+/* Center the login form vertically and horizontally */
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add some spacing between the form items */
+  ion-item {
+    margin-bottom: 10px;
+  }
+  
+  /* Style the submit button */
+  ion-button {
+    width: 100%;
+    text-transform: uppercase;
+  }
+  
+  /* Center the button within its column */
+  ion-col {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Add some margin to the toolbar */
+  ion-toolbar {
+    margin-top: 20px;
+  }
+  
+  /* Optionally style the title */
+  ion-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Optionally style the labels */
+  ion-label {
+    font-weight: bold;
+  }
+  
+  /* Optionally style the inputs */
+//   ion-input {
+//     border-radius: 5px;
+//     border: 1px solid #ccc;
+//     padding: 10px;
+//   }
+  
